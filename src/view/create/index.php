@@ -1,10 +1,10 @@
-<?php include("..\\..\\public\\template\\header.html"); ?>
+<?php include("..\\..\\..\\public\\template\\header.html"); ?>
 
 <div class="Container">
     <h1 class="py-2">Create an account</h1>
     <p class="py-2">An account allows you to login and use our services.</p>
 
-    <form action="../../../controller/createUser.php" method="post">
+    <form action="../../controller/createUser.php" method="post">
         <div class="flex *:mt-2">
             <input class="w-full input input-left" type="text" name="fname" placeholder="First Name" />
             <input class="w-full input input-right" type="text" name="lname" placeholder="Last Name" />
@@ -24,4 +24,4 @@
     <p class="footer-text">Already have an account? <a class="hyperlink" href="../signin/">Sign in</a></p>
 </div>
 
-<?php include("..\\..\\public\\template\\footer.html"); ?>
+<?php include("..\\..\\..\\public\\template\\footer.html"); ?>

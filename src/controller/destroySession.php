@@ -3,4 +3,4 @@
 session_start();
 session_destroy();
 
-header("Location: ../view/pages/signin/");
+header("Location: ../view/signin/");

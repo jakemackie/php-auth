@@ -30,6 +30,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['user_email'] = $user->getEmail();
         $_SESSION['user_username'] = $user->getUsername();
 
-        header("Location: .../view/pages/dashboard/");
+        header("Location: ../view/dashboard/");
     }
 }

@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "tailwind": "npx tailwindcss -i ./src/view/tailwind.css -o ./src/view/public/css/output.css --watch"
+    "tailwind": "npx tailwindcss -i ./src/view/tailwind.css -o ./public/css/output.css --watch"
   },
   "devDependencies": {
     "@prettier/plugin-php": "^0.22.2",

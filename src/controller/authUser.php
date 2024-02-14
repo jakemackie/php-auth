@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['user_email'] = $user['email'];
             $_SESSION['user_username'] = $user['username'];
 
-            header("Location: ../view/pages/dashboard/");
+            header("Location: ../view/dashboard/");
         } else {
             echo "Incorrect password.";
         }

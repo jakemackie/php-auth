@@ -1,6 +1,6 @@
-<?php include("..\\..\\public\\template\\header.html"); ?>
+<?php include("..\\..\\..\\public\\template\\header.html"); ?>
 
-<?php include("..\\..\\..\\controller\\identifySession.php"); ?>
+<?php include("..\\..\\controller\\identifySession.php"); ?>
 
 <div class="Container">
     <h1>
@@ -19,9 +19,9 @@
             Username:
             <?php echo ($_SESSION['user_username']) ?>
         </p>
-        <button class="btn bg-red-600" onclick="window.location.href='../../../controller/destroySession.php'">Sign
+        <button class="btn bg-red-600" onclick="window.location.href='../../controller/destroySession.php'">Sign
             out</button>
     </div>
 </div>
 
-<?php include("..\\..\\public\\template\\footer.html"); ?>
+<?php include("..\\..\\..\\public\\template\\footer.html"); ?>
