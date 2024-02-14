@@ -7,8 +7,11 @@ if (isset($_GET['error'])) {
         case 'invalidUser':
             $errorMessage = 'User does not exist.';
             break;
-        case 'incorrectPassword':
+        case 'invalidPassword':
             $errorMessage = 'Incorrect password.';
+            break;
+        case 'invalidEmail':
+            $errorMessage = 'Invalid email.';
             break;
         case 'emailTaken':
             $errorMessage = 'Email is already in use.';

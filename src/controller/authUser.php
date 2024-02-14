@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             header("Location: ../view/dashboard/");
         } else {
-            header("Location: ../view/signin?error=incorrectPassword");
+            header("Location: ../view/signin?error=invalidPassword");
         }
     }
 }

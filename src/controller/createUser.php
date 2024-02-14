@@ -15,6 +15,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = trim($_POST["username"]);
     $password = trim(password_hash($_POST["password"], PASSWORD_BCRYPT));
 
+    if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+        header("Location: ../view/create?error=invalidEmail");
+        exit;
+    }
+
     $user = new User($fname, $lname, $email, $username, $password);
 
     if ($database->getUserByEmailOrUsername($email)) {
