@@ -8,7 +8,7 @@
 
     <form id="form" action="../../controller/authUser.php" method="post" onsubmit="validateForm()">
         <div class="mt-4 *:mt-2">
-            <input class="w-full input" type="text" id="usernameOrEmail" name="usernameOrEmail"
+            <input class="w-full input" type="text" id="emailOrUsername" name="emailOrUsername"
                 placeholder="Username or Email" minlength="2" required />
             <input class="w-full input" type="password" id="password" name="password" placeholder="Password"
                 minlength="8" required />

@@ -8,10 +8,10 @@ $connection = $database->getConnection();
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $usernameOrEmail = $_POST["usernameOrEmail"];
+    $emailOrUsername = $_POST["emailOrUsername"];
     $password = $_POST["password"];
 
-    $user = $database->getUserByEmailOrUsername($usernameOrEmail);
+    $user = $database->getUserByEmailOrUsername($emailOrUsername);
 
     if (!$user) {
         header("Location: ../view/signin?error=invalidUser");
