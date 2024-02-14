@@ -2,9 +2,9 @@
 
 <?php include("..\\..\\..\\controller\\example.php"); ?>
 
-<Container>
+<div class="Container">
     <h1>Dashboard</h1>
     <p>Body text</p>
-</Container>
+</div>
 
 <?php include("..\\..\\public\\template\\footer.html"); ?>

@@ -1,8 +1,8 @@
 <?php include("..\\..\\public\\template\\header.html"); ?>
 
-<?php include("..\\..\\..\\controller\\example.php"); ?>
+<?php include("..\\..\\..\\controller\\create.php"); ?>
 
-<Container>
+<div class="Container">
     <h1 class="py-2">Sign in</h1>
     <p class="py-2">In order to use our services, you must be signed in.</p>
 
@@ -21,6 +21,6 @@
     </div>
 
     <p class="footer-text">Don't have an account? <a class="hyperlink" href="../create">Create one</a></p>
-</Container>
+</div>
 
 <?php include("..\\..\\public\\template\\footer.html"); ?>
