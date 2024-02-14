@@ -4,7 +4,7 @@
     <h1 class="py-2 text-center">Create an account</h1>
     <p class="py-2 text-center">An account allows you to login and use our services.</p>
 
-    <form id="form" action="../../controller/createUser.php" method="post" onsubmit="validateForm()">
+    <form id="form" action="../../controller/createUser.php" method="post">
         <div class="mt-4 *:mt-2 flex">
             <input class="w-full input input-left" type="text" name="fname" placeholder="First Name" required />
             <input class="w-full input input-right" type="text" name="lname" placeholder="Last Name" required />
@@ -25,6 +25,7 @@
     </form>
 
     <?php include("..\\..\\controller\\handleErrors.php") ?>
+    <p id="error" class="error"></p>
 
     <p class="footer-text">Already have an account? <a class="hyperlink" href="../signin/">Sign in</a></p>
 </div>

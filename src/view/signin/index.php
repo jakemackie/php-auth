@@ -6,7 +6,7 @@
     <h1 class="py-2 text-center">Sign in</h1>
     <p class="py-2 text-center">In order to use our services, you must be signed in.</p>
 
-    <form id="form" action="../../controller/authUser.php" method="post" onsubmit="validateForm()">
+    <form id="form" action="../../controller/authUser.php" method="post">
         <div class="mt-4 *:mt-2">
             <input class="w-full input" type="text" id="emailOrUsername" name="emailOrUsername"
                 placeholder="Username or Email" minlength="2" required />
@@ -18,6 +18,7 @@
     </form>
 
     <?php include("..\\..\\controller\\handleErrors.php") ?>
+    <p id="error" class="error"></p>
 
     <p class="footer-text">Don't have an account? <a class="hyperlink" href="../create/">Create one</a></p>
 </div>

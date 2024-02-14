@@ -1,1 +1,1 @@
-"use strict";
+"use strict";var form=document.querySelector("form"),username=document.getElementById("username"),error=document.getElementById("error");function validateUsername(){return username.value.match(/^[a-z_.]+$/)?(error.textContent="",!0):(error.textContent="Username can only contain lowercase letters, underscores, and periods.",!1)}form.addEventListener("submit",(function(e){validateUsername()||e.preventDefault()}));

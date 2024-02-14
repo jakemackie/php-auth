@@ -10,6 +10,12 @@ if (isset($_GET['error'])) {
         case 'incorrectPassword':
             $errorMessage = 'Incorrect password.';
             break;
+        case 'emailTaken':
+            $errorMessage = 'Email is already in use.';
+            break;
+        case 'usernameTaken':
+            $errorMessage = 'Username is taken.';
+            break;
         default:
             $errorMessage = 'An error occurred.';
     }

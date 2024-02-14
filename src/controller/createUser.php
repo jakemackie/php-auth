@@ -18,9 +18,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = new User($fname, $lname, $email, $username, $password);
 
     if ($database->getUserByEmailOrUsername($email)) {
-        echo "User already exists.";
+        header("Location: ../view/create?error=emailTaken");
     } elseif ($database->getUserByEmailOrUsername($username)) {
-        echo "User already exists.";
+        header("Location: ../view/create?error=usernameTaken");
     } else {
         $database->createUser($fname, $lname, $email, $username, $password);
 
