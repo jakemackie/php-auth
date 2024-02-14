@@ -1,13 +1,18 @@
 {
   "scripts": {
     "tailwind": "npx tailwindcss -i ./src/view/tailwind.css -o ./public/css/output.css --watch",
-    "build": "tsc && npm run minify",
-    "minify": "terser --compress --mangle --output public/js/validate.js -- public/js/validate.js"
+    "build": "tsc && npm run minifyjs && npm run minifycss",
+    "minifyjs": "terser --compress --mangle --output public/js/validate.js -- public/js/validate.js",
+    "minifycss": "npx postcss public/css/output.css -o public/css/output.css"
   },
   "devDependencies": {
     "@prettier/plugin-php": "^0.22.2",
     "prettier": "^3.2.5",
     "tailwindcss": "^3.4.1",
     "terser": "^5.27.0"
+  },
+  "dependencies": {
+    "cssnano": "^6.0.3",
+    "postcss-cli": "^11.0.0"
   }
 }

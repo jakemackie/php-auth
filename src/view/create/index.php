@@ -12,15 +12,15 @@
 
         <div class="*:mt-2">
             <input class="w-full input" type="email" id="email" name="email" placeholder="Email" pattern="\S+@\S+\.\S+"
-                required />
+                autocomplete="on" required />
             <input class="w-full input" type="text" id="username" name="username" placeholder="Username" minlength="2"
-                required />
+                autocomplete="on" required />
             <input class="w-full input" type="password" id="password" name="password" placeholder="Password"
                 minlength="8" required />
         </div>
 
         <div class="mt-2">
-            <button id="submitBtn" class="w-full btn bg-blue-500" type="submit">Create Account</button>
+            <button id="submitBtn" class="w-full btn bg-blue-700" type="submit">Create Account</button>
         </div>
     </form>
 

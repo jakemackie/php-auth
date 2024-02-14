@@ -31,7 +31,7 @@ label {
 }
 
 .hyperlink {
-    @apply text-blue-500 hover:underline;
+    @apply text-blue-700 underline;
 }
 
 .footer-text {

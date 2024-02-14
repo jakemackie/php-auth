@@ -13,7 +13,7 @@
         </div>
 
         <div class="mt-2">
-            <button id="submitBtn" class="w-full btn bg-blue-500" type="submit">Sign in</button>
+            <button id="submitBtn" class="w-full btn bg-blue-700" type="submit">Sign in</button>
         </div>
     </form>
 
