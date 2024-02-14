@@ -19,7 +19,7 @@ function validateUsername() {
   }
 }
 
-form.addEventListener("submit", function (event) {
+form.addEventListener("submit", function (event: Event) {
   if (!validateUsername()) {
     event.preventDefault();
   }
