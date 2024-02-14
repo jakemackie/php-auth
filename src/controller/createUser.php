@@ -9,11 +9,11 @@ $connection = $database->getConnection();
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $fname = $_POST["fname"];
-    $lname = $_POST["lname"];
-    $email = $_POST["email"];
-    $username = $_POST["username"];
-    $password = password_hash($_POST["password"], PASSWORD_BCRYPT);
+    $fname = trim($_POST["fname"]);
+    $lname = trim($_POST["lname"]);
+    $email = trim($_POST["email"]);
+    $username = trim($_POST["username"]);
+    $password = trim(password_hash($_POST["password"], PASSWORD_BCRYPT));
 
     $user = new User($fname, $lname, $email, $username, $password);
 

@@ -8,8 +8,8 @@ $connection = $database->getConnection();
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $emailOrUsername = $_POST["emailOrUsername"];
-    $password = $_POST["password"];
+    $emailOrUsername = trim($_POST["emailOrUsername"]);
+    $password = trim($_POST["password"]);
 
     $user = $database->getUserByEmailOrUsername($emailOrUsername);
 
