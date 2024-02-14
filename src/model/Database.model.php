@@ -116,10 +116,10 @@ class Database
      *
      * @param string $usernameOrEmail The user's username or email.
      */
-    public function getUserByEmailOrUsername($usernameOrEmail)
+    public function getUserByEmailOrUsername($emailOrUsername)
     {
         $stmt = $this->connection->prepare("SELECT * FROM users WHERE email = ? OR username = ?");
-        $stmt->bind_param("ss", $usernameOrEmail, $usernameOrEmail);
+        $stmt->bind_param("ss", $emailOrUsername, $emailOrUsername);
         $stmt->execute();
         $result = $stmt->get_result();
         $user = $result->fetch_assoc();
