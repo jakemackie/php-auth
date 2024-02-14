@@ -4,20 +4,20 @@
 
 <div class="Container">
     <h1>
-        <?php echo ($_SESSION['user_fname'] . " " . $_SESSION['user_lname']) ?>
+        <?php echo (htmlspecialchars($_SESSION['user_fname'] . " " . $_SESSION['user_lname'])) ?>
     </h1>
     <div class="*:mt-2">
         <p>
             ID:
-            <?php echo ($_SESSION['user_id']) ?>
+            <?php echo (htmlspecialchars($_SESSION['user_id'])) ?>
         </p>
         <p>
             Email:
-            <?php echo ($_SESSION['user_email']) ?>
+            <?php echo (htmlspecialchars($_SESSION['user_email'])) ?>
         </p>
         <p>
             Username:
-            <?php echo ($_SESSION['user_username']) ?>
+            <?php echo (htmlspecialchars($_SESSION['user_username'])) ?>
         </p>
 
         <p class="footer-text">You can sign out <a class="hyperlink" href="../../controller/destroySession.php">here</a>
