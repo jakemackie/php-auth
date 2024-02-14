@@ -31,6 +31,14 @@ body {
     padding: 1rem;
 }
 
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
 @media only screen and (max-width: 768px) {
     .Container {
         min-height: 100vh;
@@ -40,9 +48,3 @@ body {
         justify-content: center;
     }
 }
-
-/* @media only screen and (min-width: 1024px) {
-    .Container {
-        width: 700px;
-    }
-}    */

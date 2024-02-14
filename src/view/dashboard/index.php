@@ -25,4 +25,6 @@
     </div>
 </div>
 
+<p class="footer">Made with ❤️ by <a class="hyperlink" href="https://github.com/vswc">vswc</a></p>
+
 <?php include("..\\..\\..\\public\\template\\footer.html"); ?>
