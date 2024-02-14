@@ -9,9 +9,8 @@ class User
     private $username;
     private $password;
 
-    public function __construct($id, $fname, $lname, $email, $username, $password)
+    public function __construct($fname, $lname, $email, $username, $password)
     {
-        $this->id = $id;
         $this->setFname($fname);
         $this->setLname($lname);
         $this->setEmail($email);
@@ -19,12 +18,12 @@ class User
         $this->setPassword($password);
     }
 
+    // Getters and Setters
+
     public function getId()
     {
         return $this->id;
     }
-
-    // Getters and Setters
 
     public function getFname()
     {
