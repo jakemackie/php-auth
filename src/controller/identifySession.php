@@ -2,7 +2,8 @@
 
 session_start();
 
-if (!isset($_SESSION['user_id'])) {
-    header("Location: ../signin");
-    exit;
+if (isset($_SESSION['user_id'])) {
+    if (strpos($_SERVER['REQUEST_URI'], '/signin') !== false) {
+        header("Location: ../dashboard/");
+    }
 }

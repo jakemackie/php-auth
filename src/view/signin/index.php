@@ -1,5 +1,7 @@
 <?php include("..\\..\\..\\public\\template\\header.html"); ?>
 
+<?php include("..\\..\\controller\\identifySession.php") ?>
+
 <div class="Container">
     <h1 class="py-2">Sign in</h1>
     <p class="py-2">In order to use our services, you must be signed in.</p>
