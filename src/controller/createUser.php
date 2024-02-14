@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $lname = $_POST["lname"];
     $email = $_POST["email"];
     $username = $_POST["username"];
-    $password = $_POST["password"];
+    $password = password_hash($_POST["password"], PASSWORD_BCRYPT);
 
     $user = new User($fname, $lname, $email, $username, $password);
 
