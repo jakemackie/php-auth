@@ -19,8 +19,9 @@
             Username:
             <?php echo ($_SESSION['user_username']) ?>
         </p>
-        <button class="btn bg-red-600" onclick="window.location.href='../../controller/destroySession.php'">Sign
-            out</button>
+
+        <p class="footer-text">You can sign out <a class="hyperlink" href="../../controller/destroySession.php">here</a>
+        </p>
     </div>
 </div>
 
