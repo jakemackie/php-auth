@@ -1,5 +1,5 @@
 node_modules/
-
 vendor/
 
 public/css/output.css
+public/js/validate.js
