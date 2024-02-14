@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 h1 {
-    @apply text-xl font-bold;
+    @apply text-3xl font-bold;
 }
 
 p {
@@ -19,11 +19,11 @@ label {
 }
 
 .input-left {
-    @apply mr-2;
+    @apply mr-1;
 }
 
 .input-right {
-    @apply ml-2;
+    @apply ml-1;
 }
 
 .btn {

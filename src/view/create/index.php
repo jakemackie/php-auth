@@ -1,8 +1,8 @@
 <?php include("..\\..\\..\\public\\template\\header.html"); ?>
 
 <div class="Container">
-    <h1 class="py-2">Create an account</h1>
-    <p class="py-2">An account allows you to login and use our services.</p>
+    <h1 class="py-2 text-center">Create an account</h1>
+    <p class="py-2 text-center">An account allows you to login and use our services.</p>
 
     <form id="form" action="../../controller/createUser.php" method="post" onsubmit="validateForm()">
         <div class="mt-4 *:mt-2 flex">

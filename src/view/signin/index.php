@@ -3,8 +3,8 @@
 <?php include("..\\..\\controller\\identifySession.php") ?>
 
 <div class="Container">
-    <h1 class="py-2">Sign in</h1>
-    <p class="py-2">In order to use our services, you must be signed in.</p>
+    <h1 class="py-2 text-center">Sign in</h1>
+    <p class="py-2 text-center">In order to use our services, you must be signed in.</p>
 
     <form id="form" action="../../controller/authUser.php" method="post" onsubmit="validateForm()">
         <div class="mt-4 *:mt-2">
