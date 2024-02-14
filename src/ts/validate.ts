@@ -1,1 +1,1 @@
-// Validation to be added
+// Undecided whether Typescript validation is needed.

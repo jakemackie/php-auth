@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = $database->getUserByEmailOrUsername($usernameOrEmail);
 
     if (!$user) {
-        echo "User not found.";
+        header("Location: ../view/signin?error=invalidUser");
     } else {
         if (password_verify($password, $user['password_hash'])) {
             $_SESSION['user_id'] = $user['id'];
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             header("Location: ../view/dashboard/");
         } else {
-            echo "Incorrect password.";
+            header("Location: ../view/signin?error=incorrectPassword");
         }
     }
 }

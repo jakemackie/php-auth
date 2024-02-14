@@ -19,6 +19,8 @@
         </div>
     </form>
 
+    <?php include("..\\..\\controller\\handleErrors.php") ?>
+
     <p class="footer-text">Don't have an account? <a class="hyperlink" href="../create/">Create one</a></p>
 </div>
 

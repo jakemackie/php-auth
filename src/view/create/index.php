@@ -24,6 +24,8 @@
         </div>
     </form>
 
+    <?php include("..\\..\\controller\\handleErrors.php") ?>
+
     <p class="footer-text">Already have an account? <a class="hyperlink" href="../signin/">Sign in</a></p>
 </div>
 
