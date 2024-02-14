@@ -24,11 +24,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $database->createUser($fname, $lname, $email, $username, $password);
 
-        $_SESSION['user_id'] = $user->getId();
         $_SESSION['user_fname'] = $user->getFname();
         $_SESSION['user_lname'] = $user->getLname();
         $_SESSION['user_email'] = $user->getEmail();
         $_SESSION['user_username'] = $user->getUsername();
+
+        $user = $database->getUserByEmailOrUsername($email);
+        $_SESSION['user_id'] = $user['id'];
+
 
         header("Location: ../view/dashboard/");
     }
