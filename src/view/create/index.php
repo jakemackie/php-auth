@@ -5,7 +5,7 @@
     <p class="py-2">An account allows you to login and use our services.</p>
 
     <form id="form" action="../../controller/createUser.php" method="post" onsubmit="validateForm()">
-        <div class="flex *:mt-2">
+        <div class="mt-4 *:mt-2 flex">
             <input class="w-full input input-left" type="text" name="fname" placeholder="First Name" required />
             <input class="w-full input input-right" type="text" name="lname" placeholder="Last Name" required />
         </div>

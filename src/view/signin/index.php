@@ -7,16 +7,14 @@
     <p class="py-2">In order to use our services, you must be signed in.</p>
 
     <form id="form" action="../../controller/authUser.php" method="post" onsubmit="validateForm()">
-        <div class="*:mt-2">
+        <div class="mt-4 *:mt-2">
             <input class="w-full input" type="text" id="usernameOrEmail" name="usernameOrEmail"
                 placeholder="Username or Email" minlength="2" required />
             <input class="w-full input" type="password" id="password" name="password" placeholder="Password"
                 minlength="8" required />
         </div>
 
-        <div class="mt-2">
-            <button id="submitBtn" class="w-full btn bg-blue-700" type="submit">Sign in</button>
-        </div>
+        <button id="submitBtn" class="mt-2 w-full btn bg-blue-700" type="submit">Sign in</button>
     </form>
 
     <?php include("..\\..\\controller\\handleErrors.php") ?>
