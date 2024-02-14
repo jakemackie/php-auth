@@ -1,10 +1,13 @@
 {
   "scripts": {
-    "tailwind": "npx tailwindcss -i ./src/view/tailwind.css -o ./public/css/output.css --watch"
+    "tailwind": "npx tailwindcss -i ./src/view/tailwind.css -o ./public/css/output.css --watch",
+    "build": "tsc && npm run minify",
+    "minify": "terser --compress --mangle --output public/js/validate.js -- public/js/validate.js"
   },
   "devDependencies": {
     "@prettier/plugin-php": "^0.22.2",
     "prettier": "^3.2.5",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "terser": "^5.27.0"
   }
 }

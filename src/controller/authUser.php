@@ -9,7 +9,6 @@ session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usernameOrEmail = $_POST["usernameOrEmail"];
-
     $password = $_POST["password"];
 
     $user = $database->getUserByEmailOrUsername($usernameOrEmail);
