@@ -1,5 +1,5 @@
 <?php include("..\\..\\..\\public\\template\\header.html"); ?>
-
+<?php session_start(); ?>
 <?php include("..\\..\\controller\\identifySession.php"); ?>
 
 <div class="Container">

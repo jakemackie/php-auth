@@ -5,3 +5,4 @@ if (!isset($_SESSION['csrf_token'])) {
 }
 
 $csrf_token = $_SESSION['csrf_token'];
+return $csrf_token;
