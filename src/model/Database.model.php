@@ -126,4 +126,15 @@ class Database
         $stmt->close();
         return $user;
     }
+
+    public function setFailedAttempts()
+    {
+        $_SESSION['failed_attempts'] += 1;
+        if ($_SESSION['failed_attempts'] > 5) {
+            // Lock the user out for 5 minutes.
+            $_SESSION['lockout'] = time() + 300;
+            header("Location: ../view/signin?error=rateLimited");
+            exit();
+        }
+    }
 }

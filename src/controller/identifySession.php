@@ -5,3 +5,5 @@ if (isset($_SESSION['user_id'])) {
         header("Location: ../dashboard/");
     }
 }
+
+$_SESSION['failed_attempts'] = $_SESSION['failed_attempts'] ?? 0;

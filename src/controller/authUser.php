@@ -7,6 +7,11 @@ $connection = $database->getConnection();
 
 session_start();
 
+if (isset($_SESSION['lockout'])) {
+    header("Location: ../view/signin?error=rateLimited");
+    exit();
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
@@ -19,6 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = $database->getUserByEmailOrUsername($emailOrUsername);
 
     if (!$user) {
+        $database->setFailedAttempts();
         header("Location: ../view/signin?error=invalidUser");
     } else {
         if (password_verify($password, $user['password_hash'])) {
@@ -30,6 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             header("Location: ../view/dashboard/");
         } else {
+            $database->setFailedAttempts();
             header("Location: ../view/signin?error=invalidPassword");
         }
     }

@@ -19,6 +19,9 @@ if (isset($_GET['error'])) {
         case 'usernameTaken':
             $errorMessage = 'Username is taken.';
             break;
+        case 'rateLimited':
+            $errorMessage = 'Too many failed attempts. Please try again later.';
+            break;
         default:
             $errorMessage = 'An error occurred.';
     }
