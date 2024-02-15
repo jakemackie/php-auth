@@ -25,6 +25,6 @@
     </div>
 </div>
 
-<p class="footer">Made with ❤️ by <a class="hyperlink" href="https://github.com/vswc">Jake</a></p>
+<p class="footer">Made with ❤️ by <a class="hyperlink" href="https://github.com/vswc/php_auth">Jake</a></p>
 
 <?php include("..\\..\\..\\public\\template\\footer.html"); ?>
