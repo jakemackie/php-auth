@@ -127,10 +127,25 @@ class Database
         return $user;
     }
 
+    public function isLockedOut()
+    {
+        if (isset($_SESSION['lockout'])) {
+            if ($_SESSION['lockout'] > time()) {
+                header("Location: ../view/signin?error=rateLimited");
+                return true;
+            } else {
+                unset($_SESSION['lockout']);
+                $_SESSION['failed_attempts'] = 0;
+                return false;
+            }
+        }
+    }
+
     public function setFailedAttempts()
     {
         $_SESSION['failed_attempts'] += 1;
-        if ($_SESSION['failed_attempts'] > 5) {
+
+        if (!isset($_SESSION['lockout']) && $_SESSION['failed_attempts'] > 5) {
             // Lock the user out for 5 minutes.
             $_SESSION['lockout'] = time() + 300;
             header("Location: ../view/signin?error=rateLimited");

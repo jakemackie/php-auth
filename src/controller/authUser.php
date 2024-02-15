@@ -7,7 +7,7 @@ $connection = $database->getConnection();
 
 session_start();
 
-if (isset($_SESSION['lockout'])) {
+if ($database->isLockedOut()) {
     header("Location: ../view/signin?error=rateLimited");
     exit();
 }
