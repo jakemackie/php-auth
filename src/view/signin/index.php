@@ -1,6 +1,6 @@
 <?php include("..\\..\\..\\public\\template\\header.html"); ?>
-
 <?php include("..\\..\\controller\\identifySession.php") ?>
+<?php include("..\\..\\controller\\generateToken.php") ?>
 
 <div class="Container">
     <h1 class="py-2 text-center">Sign in</h1>
@@ -14,7 +14,11 @@
                 minlength="8" required />
         </div>
 
-        <button id="submitBtn" class="mt-2 w-full btn bg-blue-700" type="submit">Sign in</button>
+        <input type="hidden" name="csrf_token" value="<?php echo $csrf_token; ?>">
+
+        <div class="mt-2">
+            <button id="submitBtn" class="w-full btn bg-blue-700" type="submit">Create Account</button>
+        </div>
     </form>
 
     <?php include("..\\..\\controller\\handleErrors.php") ?>

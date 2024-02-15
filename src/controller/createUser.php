@@ -9,6 +9,11 @@ $connection = $database->getConnection();
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
+        die("CSRF token validation failed.");
+    }
+
     $fname = trim($_POST["fname"]);
     $lname = trim($_POST["lname"]);
     $email = trim($_POST["email"]);

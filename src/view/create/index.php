@@ -1,4 +1,5 @@
 <?php include("..\\..\\..\\public\\template\\header.html"); ?>
+<?php include("..\\..\\controller\\generateToken.php") ?>
 
 <div class="Container">
     <h1 class="py-2 text-center">Create an account</h1>
@@ -18,6 +19,8 @@
             <input class="w-full input" type="password" id="password" name="password" placeholder="Password"
                 minlength="8" required />
         </div>
+
+        <input type="hidden" name="csrf_token" value="<?php echo $csrf_token; ?>">
 
         <div class="mt-2">
             <button id="submitBtn" class="w-full btn bg-blue-700" type="submit">Create Account</button>
