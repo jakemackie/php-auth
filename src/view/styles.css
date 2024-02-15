@@ -35,7 +35,7 @@ label {
 }
 
 .footer-text {
-    @apply mt-8 text-base;
+    @apply mt-1 md:mt-3 text-base;
 }
 
 .error {
