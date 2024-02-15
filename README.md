@@ -7,7 +7,7 @@ This project serves as a testiment to my understanding of frontend and backend w
 <br>
 
 <div align="center">
-    <img src="./public//img/dark_mvc_notes.png" alt="My notes about MVC" width="50%">
+    <img src="./public//img/dark_mvc_notes.png" alt="My notes about MVC">
 </div>
 
 <br>
