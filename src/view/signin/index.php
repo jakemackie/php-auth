@@ -11,8 +11,15 @@
         <div class="mt-4 *:mt-2">
             <input class="w-full input" type="text" id="emailOrUsername" name="emailOrUsername"
                 placeholder="Username or Email" minlength="2" required />
-            <input class="w-full input" type="password" id="password" name="password" placeholder="Password"
-                minlength="8" required />
+            <div class="flex relative">
+                <input class="w-full input" type="password" id="password" name="password" placeholder="Password"
+                    minlength="8" required />
+                <div onclick="togglePasswordVisibility()"
+                    class="cursor-pointer bg-gray-100 rounded-md border p-1  absolute right-2 top-1/2 transform -translate-y-1/2">
+                    <img src="../../../public/svg/eye-off.svg" id="eye-off" alt="eye-off">
+                    <img src="../../../public/svg/eye.svg" class="hidden" id="eye" alt="eye">
+                </div>
+            </div>
         </div>
 
         <input type="hidden" name="csrf_token" value="<?php echo ($csrf_token); ?>">

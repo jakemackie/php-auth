@@ -29,3 +29,21 @@ form.addEventListener("submit", function (event: Event) {
     event.preventDefault();
   }
 });
+
+function togglePasswordVisibility() {
+  const password: HTMLInputElement = document.getElementById(
+    "password",
+  ) as HTMLInputElement;
+  const passwordHidden = document.getElementById("eye-off") as HTMLElement;
+  const passwordVisible = document.getElementById("eye") as HTMLElement;
+
+  if (password.type === "password") {
+    password.type = "text";
+    passwordHidden.classList.toggle("hidden");
+    passwordVisible.classList.toggle("hidden");
+  } else {
+    password.type = "password";
+    passwordHidden.classList.toggle("hidden");
+    passwordVisible.classList.toggle("hidden");
+  }
+}
