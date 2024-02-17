@@ -1,23 +1,24 @@
 <?php include("..\\..\\..\\public\\template\\header.html"); ?>
 <?php session_start(); ?>
 <?php include("..\\..\\controller\\identifySession.php"); ?>
+<?php include("..\\..\\controller\\getUserProps.php"); ?>
 
 <div class="Container">
     <h1>
-        <?php echo (htmlspecialchars($_SESSION['user_fname'] . " " . $_SESSION['user_lname'])) ?>
+        <?php echo (htmlspecialchars("Welcome back," . " " . getUserFirstName() . "!")) ?>
     </h1>
-    <div class="*:mt-2">
+    <div class="mt-5 *:mt-3">
         <p>
-            ID:
-            <?php echo (htmlspecialchars($_SESSION['user_id'])) ?>
+            Username:
+            <?php echo (htmlspecialchars(getUserUsername())); ?>
         </p>
         <p>
             Email:
-            <?php echo (htmlspecialchars($_SESSION['user_email'])) ?>
+            <?php echo (htmlspecialchars(getUserHiddenEmail())) ?>
         </p>
         <p>
-            Username:
-            <?php echo (htmlspecialchars($_SESSION['user_username'])) ?>
+            ID
+            <?php echo (htmlspecialchars(getUserId())) ?>
         </p>
 
         <p class="footer-text">You can sign out <a class="hyperlink" href="../../controller/destroySession.php">here</a>

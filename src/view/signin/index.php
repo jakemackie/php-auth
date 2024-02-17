@@ -18,7 +18,7 @@
         <input type="hidden" name="csrf_token" value="<?php echo ($csrf_token); ?>">
 
         <div class="mt-2">
-            <button id="submitBtn" class="w-full btn bg-blue-700" type="submit">Login</button>
+            <button id="submitBtn" class="w-full btn bg-blue-700 outline-blue-500" type="submit">Login</button>
         </div>
     </form>
 

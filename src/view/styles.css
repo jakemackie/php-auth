@@ -27,7 +27,7 @@ label {
 }
 
 .btn {
-    @apply py-3 px-4 border rounded-md text-white;
+    @apply py-3 px-4 border rounded-md outline-offset-0 text-white focus:outline;
 }
 
 .hyperlink {
