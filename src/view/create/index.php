@@ -1,12 +1,17 @@
 <?php include("..\\..\\..\\public\\template\\header.html"); ?>
-<?php session_start(); ?>
-<?php include("..\\..\\controller\\generateToken.php") ?>
+<?php include("..\\..\\controller\\Session.controller.php") ?>
+
+<?php
+$session = new Session();
+$csrf_token = $session->regenerateCSRFToken();
+$session->identifyUser();
+?>
 
 <div class="Container">
     <h1 class="py-2 text-center">Create an account</h1>
     <p class="py-2 text-center">An account allows you to login and use our services.</p>
 
-    <form id="form" action="../../controller/createUser.php" method="post">
+    <form id="form" action="../../controller/helper/Register.php" method="post">
         <div class="mt-4 *:mt-2 flex">
             <input class="w-full input input-left" type="text" name="fname" placeholder="First Name" required />
             <input class="w-full input input-right" type="text" name="lname" placeholder="Last Name" required />

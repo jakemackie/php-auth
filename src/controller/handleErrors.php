@@ -4,11 +4,14 @@ if (isset($_GET['error'])) {
     $errorType = $_GET['error'];
 
     switch ($errorType) {
-        case 'invalidUser':
-            $errorMessage = 'User does not exist.';
+        case 'invalidName':
+            $errorMessage = 'Invalid name.';
+            break;
+        case 'invalidUsername':
+            $errorMessage = 'Invalid username.';
             break;
         case 'invalidPassword':
-            $errorMessage = 'Incorrect password.';
+            $errorMessage = 'Invalid password.';
             break;
         case 'invalidEmail':
             $errorMessage = 'Invalid email.';
@@ -16,11 +19,20 @@ if (isset($_GET['error'])) {
         case 'emailTaken':
             $errorMessage = 'Email is already in use.';
             break;
+        case 'invalidEmailOrUsername':
+            $errorMessage = 'Invalid email or username.';
+            break;
         case 'usernameTaken':
             $errorMessage = 'Username is taken.';
             break;
         case 'rateLimited':
             $errorMessage = 'Too many failed attempts. Please try again later.';
+            break;
+        case 'incompleteForm':
+            $errorMessage = 'Please fill out all fields.';
+            break;
+        case 'userNotFound':
+            $errorMessage = 'User not found.';
             break;
         default:
             $errorMessage = 'An error occurred.';

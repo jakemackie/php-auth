@@ -2,7 +2,6 @@
 
 class User
 {
-    private $id;
     private $fname;
     private $lname;
     private $email;
@@ -19,11 +18,6 @@ class User
     }
 
     // Getters and Setters
-
-    public function getId()
-    {
-        return $this->id;
-    }
 
     public function getFname()
     {

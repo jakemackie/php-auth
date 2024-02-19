@@ -1,27 +1,26 @@
 <?php include("..\\..\\..\\public\\template\\header.html"); ?>
 <?php session_start(); ?>
-<?php include("..\\..\\controller\\identifySession.php"); ?>
-<?php include("..\\..\\controller\\getUserProps.php"); ?>
 
 <div class="Container">
     <h1>
-        <?php echo (htmlspecialchars("Welcome back," . " " . getUserFirstName() . "!")) ?>
+        Welcome back,
+        <?php echo (htmlspecialchars($_SESSION['user_fname'])) . "!" ?>
     </h1>
     <div class="mt-5 *:mt-3">
         <p>
             Username:
-            <?php echo (htmlspecialchars(getUserUsername())); ?>
+            <?php echo (htmlspecialchars($_SESSION['user_username'])); ?>
         </p>
         <p>
             Email:
-            <?php echo (htmlspecialchars(getUserHiddenEmail())) ?>
+            <?php echo (htmlspecialchars($_SESSION['user_email'])) ?>
         </p>
         <p>
             ID
-            <?php echo (htmlspecialchars(getUserId())) ?>
+            <?php echo (htmlspecialchars($_SESSION['user_id'])) ?>
         </p>
 
-        <p class="footer-text">You can sign out <a class="hyperlink" href="../../controller/destroySession.php">here</a>
+        <p class="footer-text">You can sign out <a class="hyperlink" href="../../controller/helper/Logout.php">here</a>
         </p>
     </div>
 </div>

@@ -1,13 +1,17 @@
 <?php include("..\\..\\..\\public\\template\\header.html"); ?>
-<?php session_start(); ?>
-<?php include("..\\..\\controller\\identifySession.php") ?>
-<?php include("..\\..\\controller\\generateToken.php") ?>
+<?php include("..\\..\\controller\\Session.controller.php") ?>
+
+<?php
+$session = new Session();
+$csrf_token = $session->regenerateCSRFToken();
+$session->identifyUser();
+?>
 
 <div class="Container">
     <h1 class="py-2 text-center">Sign in</h1>
     <p class="py-2 text-center">In order to use our services, you must be signed in.</p>
 
-    <form id="form" action="../../controller/authUser.php" method="post">
+    <form id="form" action="../../controller/helper/Login.php" method="post">
         <div class="mt-4 *:mt-2">
             <input class="w-full input" type="text" id="emailOrUsername" name="emailOrUsername"
                 placeholder="Username or Email" minlength="2" required />
