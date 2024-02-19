@@ -81,7 +81,7 @@ class Database
     /**
      * Queries the database for a user with the given username.
      *
-     * @param int $username The user's username.
+     * @param string $username The user's username.
      */
     public function getUserByUsername($username)
     {
@@ -97,7 +97,7 @@ class Database
     /**
      * Queries the database for a user with the given email.
      *
-     * @param int $email The user's email.
+     * @param string $email The user's email.
      */
 
     public function getUserByEmail($email)
