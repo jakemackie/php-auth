@@ -35,7 +35,7 @@ $session->identifyUser();
             </div>
         </div>
 
-        <input type="hidden" name="csrf_token" value="<?php echo ($csrf_token); ?>">
+        <input type="hidden" name="csrf_token" value="<?= $csrf_token; ?>">
 
         <div class="mt-2">
             <button id="submitBtn" class="w-full btn bg-blue-700 outline-blue-500" type="submit">Create Account</button>

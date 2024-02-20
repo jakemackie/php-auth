@@ -21,10 +21,17 @@ class Session
         return $csrf_token;
     }
 
+    public function getUserId()
+    {
+        $id = $_SESSION['user_id'];
+        return $id;
+
+    }
+
     public function getUserFirstName()
     {
-        $fname = $_SESSION['user_fname'];
-        return $fname;
+        $user_fname = $_SESSION['user_fname'];
+        return (htmlspecialchars($user_fname));
     }
 
     public function getUserLastName()
@@ -43,12 +50,6 @@ class Session
     {
         $username = $_SESSION['user_username'];
         return $username;
-    }
-
-    public function getUserId()
-    {
-        $id = $_SESSION['user_id'];
-        return $id;
     }
 
     public function hasPermission()

@@ -4,25 +4,31 @@
 <?php
 $session = new Session();
 $session->hasPermission();
+
+$id = $session->getUserId();
+$fname = $session->getUserFirstName();
+$lname = $session->getUserLastName();
+$email = $session->getUserEmail();
+$username = $session->getUserUsername();
 ?>
 
 <div class="Container">
     <h1>
         Welcome back,
-        <?php echo (htmlspecialchars($session->getUserFirstName())) . "!" ?>
+        <?= $fname . "!" ?>
     </h1>
     <div class="mt-5 *:mt-3">
         <p>
             Username:
-            <?php echo (htmlspecialchars($session->getUserUsername())); ?>
+            <?= $username ?>
         </p>
         <p>
             Email:
-            <?php echo (htmlspecialchars($session->getUserEmail())) ?>
+            <?= $email ?>
         </p>
         <p>
             ID
-            <?php echo (htmlspecialchars($session->getUserId())) ?>
+            <?= $id ?>
         </p>
 
         <p class="footer-text">You can sign out <a class="hyperlink" href="../../controller/helper/Logout.php">here</a>
