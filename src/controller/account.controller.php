@@ -30,11 +30,12 @@ class Account
         $database = new Database();
 
         // Adding all the fields to an array to check if they are empty.
-        $fields = "{$fname}, 
-                   {$lname}, 
-                   {$email}, 
-                   {$username}, 
-                   {$password}";
+        $fields = "
+        {$fname}, 
+        {$lname}, 
+        {$email}, 
+        {$username}, 
+        {$password}";
 
         // Looping through the array and redirecting the user if any of the fields are empty.
         if (is_array($fields)) {
@@ -87,6 +88,12 @@ class Account
             $password,
         );
 
+        $user->setFname($fname);
+        $user->setLname($lname);
+        $user->setEmail($email);
+        $user->setUsername($username);
+        $user->setPassword($password);
+
         $database->createUser(
             $user->getFname(),
             $user->getLname(),
@@ -118,8 +125,9 @@ class Account
     {
         $database = new Database();
 
-        $fields = "{$emailOrUsername}, 
-                   {$password}";
+        $fields = "
+        {$emailOrUsername}, 
+        {$password}";
 
         // Looping through the array and redirecting the user if any of the fields are empty.
         if (is_array($fields)) {
