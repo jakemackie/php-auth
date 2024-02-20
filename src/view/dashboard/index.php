@@ -1,23 +1,28 @@
 <?php include("..\\..\\..\\public\\template\\header.html"); ?>
-<?php session_start(); ?>
+<?php include("..\\..\\controller\\Session.controller.php") ?>
+
+<?php
+$session = new Session();
+$session->hasPermission();
+?>
 
 <div class="Container">
     <h1>
         Welcome back,
-        <?php echo (htmlspecialchars($_SESSION['user_fname'])) . "!" ?>
+        <?php echo (htmlspecialchars($session->getUserFirstName())) . "!" ?>
     </h1>
     <div class="mt-5 *:mt-3">
         <p>
             Username:
-            <?php echo (htmlspecialchars($_SESSION['user_username'])); ?>
+            <?php echo (htmlspecialchars($session->getUserUsername())); ?>
         </p>
         <p>
             Email:
-            <?php echo (htmlspecialchars($_SESSION['user_email'])) ?>
+            <?php echo (htmlspecialchars($session->getUserEmail())) ?>
         </p>
         <p>
             ID
-            <?php echo (htmlspecialchars($_SESSION['user_id'])) ?>
+            <?php echo (htmlspecialchars($session->getUserId())) ?>
         </p>
 
         <p class="footer-text">You can sign out <a class="hyperlink" href="../../controller/helper/Logout.php">here</a>

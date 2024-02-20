@@ -13,14 +13,16 @@ $session->identifyUser();
 
     <form id="form" action="../../controller/helper/Register.php" method="post">
         <div class="mt-4 *:mt-2 flex">
-            <input class="w-full input input-left" type="text" name="fname" placeholder="First Name" required />
-            <input class="w-full input input-right" type="text" name="lname" placeholder="Last Name" required />
+            <input class="w-full input input-left" type="text" name="fname" placeholder="First Name" autocomplete="on"
+                minlength="2" required />
+            <input class="w-full input input-right" type="text" name="lname" placeholder="Last Name" autocomplete="on"
+                minlength="2" required />
         </div>
 
         <div class="*:mt-2">
             <input class="w-full input" type="email" id="email" name="email" placeholder="Email" pattern="\S+@\S+\.\S+"
                 autocomplete="on" required />
-            <input class="w-full input" type="text" id="username" name="username" placeholder="Username" minlength="2"
+            <input class="w-full input" type="text" id="username" name="username" placeholder="Username" minlength="3"
                 autocomplete="on" required />
             <div class="flex relative">
                 <input class="w-full input" type="password" id="password" name="password" placeholder="Password"
@@ -40,7 +42,7 @@ $session->identifyUser();
         </div>
     </form>
 
-    <?php include("..\\..\\controller\\handleErrors.php") ?>
+    <?php include("..\\..\\controller\\helper\\Errors.php") ?>
     <p id="error" class="error"></p>
 
     <p class="footer-text">Already have an account? <a class="hyperlink" href="../signin/">Sign in</a></p>

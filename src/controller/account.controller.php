@@ -74,7 +74,7 @@ class Account
         }
 
         // Checking if the email or username is already taken.
-        if ($database->getUserByEmailOrUsername($email || $username)) {
+        if ($database->getUserByEmailOrUsername($email) || $database->getUserByEmailOrUsername($username)) {
             header("Location: ../../view/create?error=userFound");
             exit;
         }
@@ -117,6 +117,19 @@ class Account
     public function login($emailOrUsername, $password)
     {
         $database = new Database();
+
+        $fields = "{$emailOrUsername}, 
+                   {$password}";
+
+        // Looping through the array and redirecting the user if any of the fields are empty.
+        if (is_array($fields)) {
+            foreach ($fields as $field) {
+                if (empty($field)) {
+                    header("Location: ../../view/create?error=incompleteForm");
+                    exit();
+                }
+            }
+        }
 
         // Checking length of email or username
         if (strlen($emailOrUsername) < 2) {

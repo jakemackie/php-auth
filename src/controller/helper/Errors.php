@@ -34,6 +34,9 @@ if (isset($_GET['error'])) {
         case 'userNotFound':
             $errorMessage = 'User not found.';
             break;
+        case 'userFound':
+            $errorMessage = 'User already exists.';
+            break;
         default:
             $errorMessage = 'An error occurred.';
     }
