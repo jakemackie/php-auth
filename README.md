@@ -1,15 +1,34 @@
 <h1 align="center">
-PHP Authentication system
+php_auth
 </h1>
 
-This project serves as a testiment to my understanding of frontend and backend web development. I used various languages in order to produce a functional login system that defends against common attacks such as XSS, CSRF or SQL injection.
+I created this project as a means of showing off what I have learnt during my study at college. Utilising both MVC and OOP-first paradigms I have built a robust login authentication flow with focus on easy of use and functionaility. I have used multiple languages to achieve this, each one serving their own purpose throughout the website. To create your own dev enviroment and run the project follow below.
+<br/>
+> In order to see the outcome of this project, you must set up your own developer enviroment.
 
-<br>
+**Clone the repository:**
+---
+```shell 
+git clone https://github.com/jakemackie/php_auth php_auth
+```
+> change the "php_auth" parameter to a folder name you'd like to save this project to.
 
-<div align="center">
-    <img src="./public//img/dark_mvc_notes.png" alt="My notes about MVC">
-</div>
+**Install various dependencies:**
+---
+NodeJS
+```shell 
+npm i
+```
 
-<br>
+Composer (for PHP)
+```shell
+composer install
+```
+> Please ensure you have [NodeJS](https://nodejs.org/en) and [Composer](https://getcomposer.org/download/) installed. 
+> You will need a local web server provider such as apache and a MySQL Database. I use [XAMPP](https://www.apachefriends.org/download.html).
+> A database isn't provided with the project, it connects to an existing one. You should create a database called "php_auth" then can import the `setup.sql` script found in `src/scripts/`
 
-This project was written with MVC in mind. This is a commonly followed web standard that outlines a consistent folder structure to ensure best practise.
+**Run the localhost**
+---
+Open your XAMPP Control Panel (or other provider) and run the needed services (Apache, MySQL). Then connect to your local development server.
+> http://localhost/php_auth/src/view/create/
