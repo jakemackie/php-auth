@@ -9,9 +9,9 @@ I created this project as a means of showing off what I have learnt during my st
 **Clone the repository:**
 ---
 ```shell 
-git clone https://github.com/jakemackie/php_auth php_auth
+git clone https://github.com/jakemackie/php-auth php-auth
 ```
-> change the "php_auth" parameter to a folder name you'd like to save this project to.
+> change the "php-auth" parameter to a folder name you'd like to save this project to.
 
 **Install various dependencies:**
 ---
