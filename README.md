@@ -31,4 +31,4 @@ composer install
 **Run the localhost**
 ---
 Open your XAMPP Control Panel (or other provider) and run the needed services (Apache, MySQL). Then connect to your local development server.
-> http://localhost/php_auth/src/view/create/
+> http://localhost/php-auth/src/view/create/
