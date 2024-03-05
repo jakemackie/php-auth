@@ -1,5 +1,5 @@
 <h1 align="center">
-php_auth
+php-auth
 </h1>
 
 I created this project as a means of showing off what I have learnt during my study at college. Utilising both MVC and OOP-first paradigms I have built a robust login authentication flow with focus on easy of use and functionaility. I have used multiple languages to achieve this, each one serving their own purpose throughout the website. To create your own dev enviroment and run the project follow below.
