@@ -4,7 +4,7 @@ require_once("../../../vendor/autoload.php");
 
 use Dotenv\Dotenv;
 
-$dotenv = Dotenv::createImmutable($_SERVER['DOCUMENT_ROOT'] . "/php_auth");
+$dotenv = Dotenv::createImmutable($_SERVER['DOCUMENT_ROOT'] . "/php-auth");
 $dotenv->load();
 
 class Database
