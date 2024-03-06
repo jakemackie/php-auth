@@ -39,7 +39,7 @@ $session->identifyUser();
     <p class="footer-text">Don't have an account? <a class="hyperlink" href="../create/">Create one</a></p>
 </div>
 
-<p class="footer">Made with ❤️ by <a class="hyperlink" href="https://github.com/vswc/php_auth">Jake</a></p>
+<p class="footer">Made with ❤️ by <a class="hyperlink" href="https://github.com/jakemackie/php-auth">Jake</a></p>
 
 <script src="/php_auth/public/js/validate.js"></script>
 
